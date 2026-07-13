@@ -22,12 +22,12 @@
     <animateTransform attributeName="gradientTransform" type="translate" values="-1180 0; 1180 0" dur="5s" repeatCount="indefinite"/>
   </linearGradient>
 
-  <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2563EB" stop-opacity=".55"/><stop offset="100%" stop-color="#2563EB" stop-opacity="0"/></radialGradient>
-  <radialGradient id="glowViolet" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7C3AED" stop-opacity=".5"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
-  <radialGradient id="glowEmerald" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#10B981" stop-opacity=".4"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#2563EB" stop-opacity=".06"/><stop offset="100%" stop-color="#2563EB" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glowViolet" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#7C3AED" stop-opacity=".06"/><stop offset="100%" stop-color="#7C3AED" stop-opacity="0"/></radialGradient>
+  <radialGradient id="glowEmerald" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="#10B981" stop-opacity=".05"/><stop offset="100%" stop-color="#10B981" stop-opacity="0"/></radialGradient>
 
-  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0F172A" stop-opacity=".92"/><stop offset="100%" stop-color="#0B1220" stop-opacity=".92"/></linearGradient>
-  <linearGradient id="glassTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff" stop-opacity=".10"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
+  <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0F172A"/><stop offset="100%" stop-color="#0B1220"/></linearGradient>
+  <linearGradient id="glassTop" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#ffffff" stop-opacity=".03"/><stop offset="100%" stop-color="#ffffff" stop-opacity="0"/></linearGradient>
 
   <filter id="soft" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
   <filter id="softbig" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="26"/></filter>
@@ -37,8 +37,8 @@
   <clipPath id="round"><rect x="0" y="0" width="1180" height="610" rx="24"/></clipPath>
 
   <mask id="asciiMask">
-    <rect x="24" y="74" width="438" height="0" fill="#fff">
-      <animate attributeName="height" values="0;0;392;392;392;0" keyTimes="0;0.02;0.34;0.9;0.98;1" dur="11s" repeatCount="indefinite"/>
+    <rect x="24" y="70" width="438" height="0" fill="#fff">
+      <animate attributeName="height" values="0;0;404;404;404;0" keyTimes="0;0.02;0.34;0.9;0.98;1" dur="11s" repeatCount="indefinite"/>
     </rect>
   </mask>
 
@@ -49,12 +49,11 @@
 </defs>
 
 <g clip-path="url(#round)">
-  <rect x="0" y="0" width="1180" height="610" fill="#030712"/>
+  <rect x="0" y="0" width="1180" height="610" fill="url(#panel)"/>
 
+  <!-- subtle ambient glow (kept faint for a clean terminal look) -->
   <g filter="url(#softbig)">
-    <circle cx="220" cy="140" r="200" fill="url(#glowViolet)"><animateTransform attributeName="transform" type="translate" values="0 0; 20 -20; 0 0" dur="11s" repeatCount="indefinite"/></circle>
-    <circle cx="980" cy="120" r="220" fill="url(#glowBlue)"><animateTransform attributeName="transform" type="translate" values="0 0; -25 15; 0 0" dur="13s" repeatCount="indefinite"/></circle>
-    <circle cx="760" cy="560" r="240" fill="url(#glowEmerald)"><animateTransform attributeName="transform" type="translate" values="0 0; 15 -18; 0 0" dur="15s" repeatCount="indefinite"/></circle>
+    <circle cx="150" cy="300" r="180" fill="url(#glowViolet)"><animateTransform attributeName="transform" type="translate" values="0 0; 14 -14; 0 0" dur="13s" repeatCount="indefinite"/></circle>
   </g>
 
   <rect x="0" y="0" width="1180" height="610" filter="url(#noise)" opacity="0.04"/>
@@ -69,15 +68,14 @@
   </g>
 
   <!-- ===================== SINGLE WINDOW ===================== -->
-  <rect x="24" y="24" width="1132" height="562" rx="18" fill="url(#panel)" filter="url(#win)"/>
-  <rect x="24" y="24" width="1132" height="110" rx="18" fill="url(#glassTop)"/>
+  <rect x="0" y="0" width="1180" height="120" rx="24" fill="url(#glassTop)"/>
   <!-- title bar: traffic lights left -->
   <circle cx="50" cy="46" r="6" fill="#ff5f57"/>
   <circle cx="72" cy="46" r="6" fill="#febc2e"/>
   <circle cx="94" cy="46" r="6" fill="#28c840"/>
   <text x="590" y="50" text-anchor="middle" font-family="Consolas,'Courier New',monospace" font-size="12" fill="#94A3B8">donovan@dev — ~/profile</text>
-  <line x1="24" y1="68" x2="1156" y2="68" stroke="rgba(255,255,255,.08)"/>
-  <line x1="462" y1="68" x2="462" y2="586" stroke="rgba(255,255,255,.08)"/>
+  <line x1="0" y1="68" x2="1180" y2="68" stroke="rgba(255,255,255,.08)"/>
+  <line x1="462" y1="68" x2="462" y2="610" stroke="rgba(255,255,255,.08)"/>
 
   <!-- ===================== LEFT: ASCII PORTRAIT ===================== -->
   <g mask="url(#asciiMask)" font-family="Consolas,'Courier New',monospace" font-size="5.2" fill="url(#asciiGrad)" xml:space="preserve">
