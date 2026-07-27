@@ -48,7 +48,7 @@
 </defs>
 
 <g clip-path="url(#round)">
-  <rect x="0" y="0" width="1180" height="610" fill="#0D1117"/>
+  <rect x="0" y="0" width="1180" height="610" fill="url(#panel)"/>
 
   <!-- ===================== SINGLE WINDOW ===================== -->
   <rect x="0" y="0" width="1180" height="80" rx="24" fill="url(#glassTop)"/>
