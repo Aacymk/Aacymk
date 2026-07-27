@@ -108,5 +108,7 @@
     <g opacity="0"><animate attributeName="opacity" to="1" dur=".3s" begin="2.21s" fill="freeze"/><rect x="805" y="512" width="132" height="34" rx="17" fill="#DDF4FF" stroke="none"/><text x="871" y="534" text-anchor="middle">PostgreSQL</text></g>
     <g opacity="0"><animate attributeName="opacity" to="1" dur=".3s" begin="2.28s" fill="freeze"/><rect x="950" y="512" width="72" height="34" rx="17" fill="#DDF4FF" stroke="none"/><text x="986" y="534" text-anchor="middle">Git</text></g>
   </g>
+
+  <rect x="1" y="1" width="1178" height="608" rx="24" fill="none" stroke="#D0D7DE"/>
 </g>
 </svg>
